@@ -706,7 +706,7 @@ typedef NS_ENUM(NSUInteger, GKActionSheetPickerType) {
         
         NSUInteger index = [self.pickerView selectedRowInComponent:0];
         GKActionSheetPickerItem *item = [self.items objectAtIndex:index];
-        self.selection = item.value;
+        self.selection = item;
         
     } else if (self.pickerType == GKActionSheetPickerTypeMultiColumnString) {
 
@@ -716,7 +716,7 @@ typedef NS_ENUM(NSUInteger, GKActionSheetPickerType) {
             NSUInteger index = [self.pickerView selectedRowInComponent:i];
             NSArray *component = [self.components objectAtIndex:i];
             GKActionSheetPickerItem *item = [component objectAtIndex:index];
-            [selections addObject:item.value];
+            [selections addObject:item];
         }
         
         self.selections = selections;

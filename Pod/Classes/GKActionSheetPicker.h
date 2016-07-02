@@ -85,7 +85,7 @@ typedef NS_ENUM(NSUInteger, GKActionSheetPickerDismissType) {
 @property (nonatomic, readonly) NSArray *selections;
 
 //! The value of the selected item. If `GKActionSheetPickerItem` were given, it returns it's `value`, otherwise the string itself.
-@property (nonatomic, readonly) id selection;
+@property (nonatomic, readonly) GKActionSheetPickerItem *selection;
 
 //! Returns `YES`, if the picker is currently presented.
 @property (nonatomic, readonly) BOOL isOpen;
